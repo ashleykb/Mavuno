@@ -1,0 +1,191 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+    <meta charset="utf-8" />
+
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title></title>
+
+    <meta name="description" content="" />
+    
+     <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link href="style.css" rel="stylesheet" />
+    <link href="http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold" rel="stylesheet" /> <!-- Load Droid Serif from Google Fonts -->
+    
+    <!-- All JavaScript at the bottom, except for Modernizr and Respond.
+    	Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries -->
+    <script src="js/modernizr-1.7.min.js"></script>
+    <script src="js/respond.min.js"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <header id="header" class="clearfix" role="banner">
+        <hgroup>
+            <h1 id="site-title"><a href="index.html">Mavuno</a></h1>
+            <h2 id="site-description">Using weather patterns to inform decision making for rural farmers</h2>
+        </hgroup>
+    </header> 
+
+<div id="main" class="clearfix">
+
+	<!-- Navigation -->
+    <nav id="menu" class="clearfix" role="navigation">
+		<ul> 
+    		<li><a href="index.html">Weather</a></li>
+        	<li><a href="predictions.html">Predictions</a>
+               		<ul>
+                    	<li><a href="predictions.html#plant">Plant</a></li>
+                    	<li><a href="predictions.html#harvest">Harvest</a></li>
+                    	<li><a href="predictions.html#mill">Mill</a></li>
+                    	<li><a href="predictions.html#market">Go to Market</a></li>
+                  	</ul>
+    	    </li>
+        	<li class="current"><a href="#">Find Groups</a></li>
+        	<li><a href="resources.html">Resources</a></li>
+ 
+        </ul>
+    </nav> <!-- #nav -->
+    
+    <!-- Show a "Please Upgrade" box to both IE7 and IE6 users (Edit to IE 6 if you just want to show it to IE6 users) - jQuery will load the content from js/ie.html into the div -->
+    
+    <!--[if lte IE 7]>
+        <div class="ie warning"></div>
+    <![endif]-->
+    
+    <div id="content" role="main">
+    
+        <article class="post">
+        
+            <h1 class="entry-title">Contact</h1>
+            
+                <form action="sendmail.php" method="post" id="contactform">
+                
+                	<fieldset>
+                    
+                    	<legend>Contact me!</legend>
+                    
+                        <p>
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" id="name" value="" />
+                        </p>
+                        
+                        <p>
+                            <label for="email">Your Email</label>
+                            <input type="email" name="email" id="email" required value="" />  
+                        </p>
+                        
+                        <p>
+                            <label for="subject">Subject</label>
+                            <input type="text" name="subject" id="subject" value="" />
+                        </p>
+                        
+                        <p>
+                        	<label for="message">Your message</label>
+                        	<textarea name="message" id="message" cols="50" rows="10" autofocus required></textarea>
+                        </p>
+                        
+                        <!-- This is hidden for normal users -->
+                        <div class="hide">
+                            <label>Do not fill out this field</label>
+                            <input name="spam_check" type="text" value="" />
+                        </div>
+                        
+                        <p>
+                        <input type="submit" name="submit" value="Send Email" />
+                        </p>
+                    
+                    </fieldset>
+                    
+                    <p class="hide" id="response"></p>
+                
+                </form>
+                
+                   <form action="#">
+                    <fieldset>
+                    <legend>Form legend</legend>
+                        <p><label for="f1">Optional Text input:</label><input type="text" id="f1" value="input text" /></p>
+                        <p><label for="rt1">Required Text input:</label><input type="text" id="rt1" required /></p>
+                        <p><label for="twp1">Text input with pattern requirement and placeholder:</label><input type="text" pattern="\d{5}(-\d{4})?" id="twp1" title="a US Zip code, with or without the +4 extension" placeholder="12345-6789"/></p>
+                        <p><label for="s1">Search input:</label><input type="search" id="s1" /></p>
+                        <p><label for="e1">Email input:</label><input type="email" id="e1" /></p>
+                        <p><label for="u1">URL input:</label><input type="url" id="u1" /></p>
+                        <p><label for="pw">Password input:</label><input type="password" id="pw" value="password" /></p>
+                        <p><label for="f2">Radio input:</label><input type="radio" id="f2" /></p>
+                        <p><label for="f3">Checkbox input:</label><input type="checkbox" id="f3" /></p>
+                        <p><label for="f4">Select field:</label><select id="f4"><option>Option 01</option><option>Option 02</option></select></p>
+                        <p><label for="f5">Textarea:</label><textarea id="f5" cols="30" rows="5" >Textarea text</textarea></p>
+                        <p><label for="f6">Input Button:</label> <input type="button" id="f6" value="button text" /></p>
+                        <p><label for="f7">Submit Button:</label> <input type="submit" id="f7" value="button text" /></p>
+                    </fieldset>
+                </form>
+        
+        </article> <!-- .post -->
+    
+    </div> <!-- #content -->
+    
+    <aside id="sidebar" role="complementary">
+    
+        <aside class="widget">
+            <h3>Sidebar heading</h3>
+            
+            <ul>
+                <li><a href="#">Li element</a></li>
+                <li><a href="#">Li element</a></li>
+                <li><a href="#">Li element</a></li>
+                <li><a href="#">Li element</a></li>
+                <li><a href="#">Li element</a></li>
+            </ul>
+        </aside> <!-- .widget -->
+        
+        <aside class="widget">
+            <!-- Non working search -->
+            <form action="#" class="searchform">
+                <input type="search" results="10" placeholder="Search..." />
+                <input type="submit" value="Search" />
+            </form> <!-- .searchform -->
+        </aside> <!-- .widget -->
+        
+        <aside class="widget">
+            <h3>Widget</h3>
+            
+            <p>
+                Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.
+            </p>
+            <p>
+                One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. 
+            </p>
+        </aside> <!-- .widget -->
+    
+    </aside> <!-- #sidebar -->
+    
+</div> <!-- #main -->
+    
+   <footer id="footer">
+        <p>
+            Copyright &copy; 2011 <a href="index.html">Mavuno.com</a>
+            <span class="sep">|</span>
+            Design by <a href="http://jayj.dk" title="Design by Jayj.dk">Jayj.dk</a>
+        </p>
+    </footer> <!-- #footer -->
+    
+    <div class="clear"></div>
+
+</div> <!-- #wrapper -->
+
+	<!-- JavaScript at the bottom for fast page loading -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
